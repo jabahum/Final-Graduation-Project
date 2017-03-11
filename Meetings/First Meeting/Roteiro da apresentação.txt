@@ -1,0 +1,20 @@
+- Projetos existentes
+
+- Procurei artigos científicos, monografia sobre triangulação e geolocalização para rastreamento de pessoas e não tem nada sobre.
+
+- Demonstração do projeto
+	+ Feito em python
+	+ openCamerasHtml.py
+	+ ExemploGoogleMaps.py
+	+ Arquivo de localização, aberto no gedit
+	+ Wget/m.camlive.info/camera/61.115.123.234
+
+	+ Localização de celulares por: 
+		* MCC, MNC, LAC, CellID, 
+		* IMEI
+		* Número de telefone
+
+	+ Localização de IPs/Routers
+		* Mostrar arquivo do Wigle no calc
+
+	+ pytacle.py -> escuta de GSM em um determinado range
