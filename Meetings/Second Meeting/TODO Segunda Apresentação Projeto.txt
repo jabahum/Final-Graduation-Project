@@ -1,0 +1,16 @@
+Para a apresentação: 
+
+- Escutar o áudio da reunião com o professor.
+- Ver se tem algo pra melhorar, alguma sugestão do professor.
+- Procurar um local que tenha pelo menos 3 antenas por perto. É NECESSÁRIO TER AS IMAGENS. 
+- Tentar achar o LAC e o CellID do local pra poder usar a triangulação. 
+- Usar a API do site https://combain.com/api/ pra mostrar no mapa exemplo a localização aproximada do indivíduo.
+- Ver se a localização bate com o range das câmeras, por exemplo, se tiver um local que tenha as câmeras por perto ver se o mapa mostra dentro desse ângulo de visão das câmeras.
+- Tentar montar uma apresentação de slides com todo o conteúdo a ser apresentado. 
+
+Falta incrementar de teórico na apresentação: 
+
+- Definições
+- Ver como calcular o LAC e o CellID.
+- Ver se dá pra converter os valores de MCC, MMC, LAC e CellID em longitude e latitude.
+- Tentar usar uma API do google maps pra ficar mais fácil. 
