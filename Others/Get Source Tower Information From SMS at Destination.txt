@@ -1,0 +1,34 @@
+http://stackoverflow.com/questions/17120814/get-source-tower-information-from-sms-at-destination
+
+In short this is not possible.
+
+an SMS message weather in PDU mode or text mode does not carry the information to match the source location to the message in any way shape or form.
+
+With reference to the article you linked to in your opening post, I'm sorry to say that there's so much B**l S**t in that post that I can smell it from here.
+
+In all the years Iv'e worked with GSM systems, both as a network maintenance engineer and later as a developer writing software to use these systems, not once have I heard of anything such as an 'LMU' or an 'E-OTD' in fact the only acronym that article really got correct was 'BTS' oh and the bit on passing the data over the signalling channel.
+
+As for the silent SMS, well that part actually is true. The special type of SMS they refer to is actually called a Ping-SMS and it exists for exactly the same reason that a regular PING on a TCP/IP network exists, and that's to see if the remote system is alive and responding.
+
+What it's NOT used for is the purpose outlined in the article, and that's for criminal gangs to send it to your phone and find out where you are.
+
+For one, the ONLY people that can correctly send these messages are the telephone operator themselves. That's not to say that it's impossible to send one from a consumer device by directly programming a PDU if you have the necessary equipment and know how. You could for instance pull this stunt off using a normal GSM modem, a batch of AT commands and some serious bit twiddling.
+
+However, since this message would by it's very nature have to go through your operators SMSC and most operators filter out anything from a subscriber connection that's not deemed regular consumer traffic, then there's a high chance this would fail.
+
+You could if you had an account, also send this message using a web sms provider that allowed you to directly construct binary messages, but again they are likely to filter out anything not deemed consumer grade messages.
+
+Finally, if you where to manage to send an SMS to a target device, the target device would not reply with anything anywhere near a chunk of location based info,cell tower, GPS or otherwise) the reason the SMS operators (and ultimately the law enforcement agencies know this info) is because EVERY handset that's attached to the GSM network MUST register itself in the an MSC (Mobile switching center) , this registration (Known as ratching up) is required by the network so it can track what channels are in use by which device on which towers so that it knows where to send paging and signalling info.
+
+Beacuse of the way the PING SMS works it causes the destination device to re-register itself, usually forcing the MSC to do a location update on the handset which causes a re-registration.
+
+Even then, all you get in the MSC is an identifier of the cell site the device is attached too, so unless you have a database in the organisation of all cell sites along with their exact lat/long co-ordinates, it's really not going to help you all that much.
+
+As for the triangulation aspect, well for that to work you'd need to know at least 2 other transmitters that the device in question can see, and what's more you'd need that device to report that info back to someone inside the network.
+
+Since typically it's only the Ril (Radio interface layer) on the device that actually keeps track of which transmitters it can see, and since the AT commands for many consumer grade GSM modems have the ability to query this information disabled, then it's often not easy to get that info without actually hacking the firmware in the device in question.
+
+How does Google do it? well quite easy, they actually have commercial agreements with network providers that pass the details of registered towers to their back-end infrastructure, in the apps themselves, they have ways of getting the 'BSS List' and sending that list back to Google HQ, where it's cross referenced with the data from the network operator, and the info they have in their own very large transmitter database and finally all this is mashed together with some insane maths to get an approximate location.
+
+Some GSM Modems and some Mobile phone handsets do have the required AT commands enabled to allow you to get this information easy, and if you can then match that information to your own database you can locate the handset your running from, but being able to send a special SMS to another device and get location info back is just a pipe dream nothing more, something like this is only going to work if your target device is already running some custom software that you can control.
+

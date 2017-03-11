@@ -1,0 +1,19 @@
+CI (cell identity) = xXYYZ, where
+xX: BSC number
+YY: BTS number within the BSC
+Z: Cell number within the BTS
+Z=0 for the omni site, Z=(1-3) for the sectoral site.
+
+CGI (cell global identification) = MCC-MNC-LAC-CI, where
+MCC=AAA: mobile country code
+MNC=BB: mobile network code
+LAC=ccCCC: location area code
+CI: cell id (see above)
+
+For example, CGI = 452 02 341 5012
+
+452=MCC of Vietnam
+02=MNC of VinaPhone network
+341=LAC
+5012=CI
+This is the second cell of the BTS-1 in the BSC-5.
