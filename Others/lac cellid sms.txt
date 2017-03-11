@@ -1,0 +1,8 @@
+Question ---> 
+Is there any way to get other's cell id without installing apps on other's cell phone?
+Answer   --->
+Sorry for the delay. The short answer is unfortunately no. Though I'll try to explain why in very broad terms.
+Under the hood GSM uses a TDMA system (Time Division Multiple Access) which just means each handset is given a discreet time slice it can use to transmit, the rest of the time your phone quietly waits - while your handset is doing nothing, other handsets are transmitting in their own discreet time slices. Somewhat complicating this is the 'mobile' part - you might be moving so the system provides timing adjustments based on your distance from the cell.
+I say all of this really just to point out that GSM is strongly controlled by the cell station - the key problem that prevents you from knowing about other users on the network is simply that the cell site doesn't tell your handset anything outside of what it needs to know to operate on the system.
+Given encryption is used over the air gap, I'm not sure there is an easy solution to the problem from the handset side - like you say, one method would be to install an application that can transmit this information to your phone directly via near field comms, wifi, or cellular data.
+The other way would be an NSA type briefcase cell station that you carry around to get a bigger picture :-) But they aren't available in surplus stores just yet. 

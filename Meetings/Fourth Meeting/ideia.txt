@@ -1,0 +1,3 @@
+Criar um servidor web para comunicação com o app, o usuario conecta o dispositivo, enviando para o servidor para ser disponibilizado para os agentes principais. 
+
+
