@@ -1,8 +1,0 @@
-start nginx 
-sudo /usr/local/nginx/sbin/nginx
-
-stop nginx
-sudo /usr/local/nginx/sbin/nginx -s stop
-
-dump file
-sudo rtmpdump -r rtmp://192.168.0.16:1935/vod2/sample.mp4 -o sample.mp4
